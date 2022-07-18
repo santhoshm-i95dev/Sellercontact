@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="I95dev\Sellercontact\Api\SellercontactRepositoryInterface" type="I95dev\Sellercontact\Model\SellercontactRepository"/>
+	<preference for="I95dev\Sellercontact\Api\Data\SellercontactInterface" type="I95dev\Sellercontact\Model\Data\Sellercontact"/>
+	<preference for="I95dev\Sellercontact\Api\Data\SellercontactSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="I95dev\Sellercontact\Model\ResourceModel\Sellercontact\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">i95dev_sellercontact</argument>
+			<argument name="resourceModel" xsi:type="string">I95dev\Sellercontact\Model\ResourceModel\Sellercontact\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="i95dev_sellercontact_listing_data_source" xsi:type="string">I95dev\Sellercontact\Model\ResourceModel\Sellercontact\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+
+</config>

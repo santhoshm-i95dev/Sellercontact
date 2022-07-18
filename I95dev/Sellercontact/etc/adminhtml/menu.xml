@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="I95dev::top_level" title="SellerContact" module="I95dev_Sellercontact" sortOrder="10" resource="Magento_Backend::content"/>
+		<add id="I95dev_Sellercontact::manage_mlsellercontact" title="ContactFormGrid" module="I95dev_Sellercontact" sortOrder="9999" resource="I95dev_Sellercontact::manage_mlsellercontact" parent="I95dev::top_level" action="customform/sellercontact"/>
+	</menu>
+</config>
